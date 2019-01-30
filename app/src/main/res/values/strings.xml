@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Asg1</string>
+    <string name="mainTitle">Saving Private CU Piggy</string>
+    <string name="detailTitle">Cuisine Details</string>
+    <string name="chunCan">Ebeneezer</string>
+    <string name="soCan">Vegether</string>
+    <string name="kebab">Chicken Tikka Kebab</string>
+    <string name="pizza">Supreme Pizza</string>
+    <string name="bbq">Vegan BBQ Pork</string>
+    <string name="fish">Vegan Fish Fillet</string>
+    <string name="chunCanDetail">Ebeneezer\'s Kebabs &amp; Pizzeria</string>
+    <string name="soCanDetail">CU Vegether</string>
+    <string name="chunCanAddr">G05, Lee Wai Chun Building</string>
+    <string name="soCanAddr">G14, Benjamin Franklin Centre</string>
+    <string name="cancelBtn">cancel</string>
+    <string name="saveBtn">save</string>
 </resources>

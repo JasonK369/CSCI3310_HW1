@@ -6,13 +6,238 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/kebabTn"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="kebab"
+        android:onClick="onClick"
+        app:layout_constraintBottom_toTopOf="@+id/pizzaTn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        app:srcCompat="@drawable/kebab_tn" />
+
+    <ImageView
+        android:id="@+id/pizzaTn"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="pizza"
+        android:onClick="onClick"
+        app:layout_constraintBottom_toTopOf="@+id/bbqTn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kebabTn"
+        app:srcCompat="@drawable/pizza_tn" />
+
+    <ImageView
+        android:id="@+id/bbqTn"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="bbq"
+        android:onClick="onClick"
+        app:layout_constraintBottom_toTopOf="@+id/fishTn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pizzaTn"
+        app:srcCompat="@drawable/vegan_pork_tn" />
+
+    <ImageView
+        android:id="@+id/fishTn"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="fish"
+        android:onClick="onClick"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bbqTn"
+        app:srcCompat="@drawable/vegan_fish_tn" />
+
     <TextView
+        android:id="@+id/kebabTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginRight="176dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/kebab"
+        app:layout_constraintBottom_toTopOf="@+id/kebabRest"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/kebabTn"
+        app:layout_constraintTop_toTopOf="@+id/kebabTn"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/kebabRest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginRight="176dp"
+        android:text="@string/chunCan"
+        app:layout_constraintBottom_toTopOf="@+id/kebabRating"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/kebabTn"
+        app:layout_constraintTop_toBottomOf="@+id/kebabTitle" />
+
+    <TextView
+        android:id="@+id/kebabRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginRight="176dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/kebabTn"
+        app:layout_constraintTop_toBottomOf="@+id/kebabRest" />
+
+    <TextView
+        android:id="@+id/pizzaTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginRight="176dp"
+        android:text="@string/pizza"
+        app:layout_constraintBottom_toTopOf="@+id/pizzaRest"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/pizzaTn"
+        app:layout_constraintTop_toTopOf="@+id/pizzaTn" />
+
+    <TextView
+        android:id="@+id/pizzaRest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginRight="176dp"
+        android:text="@string/chunCan"
+        app:layout_constraintBottom_toTopOf="@+id/pizzaRating"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/pizzaTn"
+        app:layout_constraintTop_toBottomOf="@+id/pizzaTitle" />
+
+    <TextView
+        android:id="@+id/pizzaRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginRight="176dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/pizzaTn"
+        app:layout_constraintTop_toBottomOf="@+id/pizzaRest" />
+
+    <TextView
+        android:id="@+id/bbqTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="171dp"
+        android:layout_marginRight="171dp"
+        android:text="@string/bbq"
+        app:layout_constraintBottom_toTopOf="@+id/bbqRest"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/bbqTn"
+        app:layout_constraintTop_toTopOf="@+id/bbqTn"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <TextView
+        android:id="@+id/bbqRest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginRight="176dp"
+        android:text="@string/soCan"
+        app:layout_constraintBottom_toTopOf="@+id/bbqRating"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/bbqTn"
+        app:layout_constraintTop_toBottomOf="@+id/bbqTitle" />
+
+    <TextView
+        android:id="@+id/bbqRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginRight="176dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/bbqTn"
+        app:layout_constraintTop_toBottomOf="@+id/bbqRest" />
+
+    <TextView
+        android:id="@+id/fishTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginRight="176dp"
+        android:text="@string/fish"
+        app:layout_constraintBottom_toTopOf="@+id/fishRest"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/fishTn"
+        app:layout_constraintTop_toTopOf="@+id/fishTn" />
+
+    <TextView
+        android:id="@+id/fishRest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="177dp"
+        android:layout_marginRight="177dp"
+        android:text="@string/soCan"
+        app:layout_constraintBottom_toTopOf="@+id/fishRating"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.016"
+        app:layout_constraintStart_toEndOf="@+id/fishTn"
+        app:layout_constraintTop_toBottomOf="@+id/fishTitle" />
+
+    <TextView
+        android:id="@+id/fishRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="177dp"
+        android:layout_marginRight="177dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.016"
+        app:layout_constraintStart_toEndOf="@+id/fishTn"
+        app:layout_constraintTop_toBottomOf="@+id/fishRest" />
 
 </android.support.constraint.ConstraintLayout>
